@@ -1,0 +1,228 @@
+/* ===============================================
+   GLOBAL STYLES
+   =============================================== */
+
+/* Import Zodiak Font */
+@font-face {
+    font-family: 'Zodiak';
+    src: url('/fonts/Zodiak-Thin.woff2') format('woff2'); /* Replace with the correct path */
+    font-weight: 100; /* Thin weight */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Zodiak';
+    src: url('/fonts/Zodiak-Bold.woff2') format('woff2'); /* Replace with the correct path */
+    font-weight: 700; /* Bold weight */
+    font-style: normal;
+}
+
+/* Apply Zodiak Font Globally */
+body {
+    font-family: 'Zodiak', sans-serif;
+    font-weight: 100; /* Default to thin weight */
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* ===============================================
+   TYPOGRAPHY
+   =============================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Zodiak', sans-serif;
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-weight: 700; /* Bold */
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-weight: 700; /* Bold */
+    font-size: 2.5rem;
+    line-height: 1.3;
+}
+
+h3 {
+    font-weight: 700; /* Bold */
+    font-size: 2rem;
+    line-height: 1.4;
+}
+
+p {
+    font-family: 'Zodiak', sans-serif;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin: 0 0 1rem 0;
+}
+
+/* ===============================================
+   BUTTONS
+   =============================================== */
+button {
+    font-family: 'Zodiak', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #00bcd4;
+    border: none;
+    border-radius: 4px;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #008c9e;
+}
+
+button.secondary {
+    background-color: #333;
+}
+
+button.secondary:hover {
+    background-color: #555;
+}
+
+/* ===============================================
+   HERO SECTION
+   =============================================== */
+.home-container {
+    text-align: center;
+    padding: 2rem;
+}
+
+.home-logo {
+    width: 150px;
+    margin-bottom: 1rem;
+}
+
+.home-title {
+    font-family: 'Zodiak', sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 3rem;
+    color: var(--text-primary);
+    line-height: 1.2;
+    padding: 0.5rem;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.home-subtitle {
+    font-family: 'Zodiak', sans-serif;
+    font-weight: 100; /* Thin */
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    margin-top: 1rem;
+}
+
+/* ===============================================
+   FEATURED CATEGORIES
+   =============================================== */
+.categories-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.featured-category {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.featured-category h3 {
+    font-family: 'Zodiak', sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.featured-category p {
+    font-family: 'Zodiak', sans-serif;
+    font-weight: 100; /* Thin */
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* ===============================================
+   RESPONSIVE DESIGN
+   =============================================== */
+@media (max-width: 768px) {
+    .home-title {
+        font-size: 2.5rem;
+    }
+
+    .home-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .categories-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .featured-category {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+/* ===============================================
+   SEARCH BAR STYLES
+   =============================================== */
+/* Search Bar Section */
+.search-bar-section {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid black; /* Clean black border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 0.8rem 1rem; /* Add padding for a larger appearance */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a clean look */
+    width: 500px; /* Make the search bar wider */
+  }
+  
+  .search-input {
+    border: none;
+    outline: none;
+    font-size: 1.2rem; /* Larger font size */
+    font-family: "Zodiak", sans-serif;
+    width: 100%; /* Take up the full width of the container */
+  }
+  /* ===============================================
+    NAVBAR STYLES
+   =============================================== */
+   @keyframes scrollText {
+    0% {
+        transform: translateX(100%); /* Start outside the view */
+        opacity: 1; /* Fully visible */
+    }
+    90% {
+        opacity: 1; /* Fully visible while scrolling */
+    }
+    100% {
+        transform: translateX(-100%); /* Move out of view */
+        opacity: 0; /* Fade out */
+    }
+}
